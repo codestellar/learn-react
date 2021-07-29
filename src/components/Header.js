@@ -1,4 +1,6 @@
 import React from 'react';
+// Just in case to want
+import PropTypes from 'prop-types';
 
 const Header = props => {
   return (
@@ -8,10 +10,13 @@ const Header = props => {
   );
 };
 
-
 // This is how you can set the default properties
 Header.defaultProps = {
   title: 'Task Tracker'
+};
+
+Header.propTypes = {
+  title: PropTypes.number
 };
 
 export default Header;
