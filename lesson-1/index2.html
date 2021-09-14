@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Hello React!</title>
+
+    <script src="https://unpkg.com/react@^16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      // React code will go here
+      // This line will go to App.js
+      function App() {
+        return (
+          <div>
+              <Header></Header>
+              <Main></Main>
+              <Footer></Footer>
+          </div>
+        );
+      }
+
+      // This line will go to Header.js
+      function Header() {
+        return (
+          <h1>Welcome to React!</h1>
+        );
+      }
+
+      // This line will go to Main.js
+      function Main() {
+        return (
+          <div>
+              <p>
+                This is a functional component.
+              </p>
+          </div>
+        );
+      }      
+
+      // This line will go to Footer.js
+      function Footer() {
+        return (
+          <div>
+              &copy; 2021 NextGenApps
+          </div>
+        );
+      }      
+
+      // This line will go to index.js
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>

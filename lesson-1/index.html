@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Hello React!</title>
+
+    <script src="https://unpkg.com/react@^16/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.13.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      // React code will go here
+      class App extends React.Component {
+        render() {
+          return (
+            <div>
+              <Header></Header>
+                <Main></Main>              
+              <Footer></Footer>
+            </div>
+          );
+        }
+      }
+
+      class Header extends React.Component {
+        render() {
+          return (
+            <div>
+              <h1>Welcome to React!</h1>
+            </div>
+          );
+        }
+      }
+
+      class Main extends React.Component {
+        render() {
+          return (
+            <div>
+              <p>React is pretty easy. Treating components is super easy.</p>
+              <p><input type="text" placeholder="Your Name" /></p>
+            </div>
+          );
+        }
+      }      
+
+      class Footer extends React.Component {
+        render() {
+          return (
+            <div>
+              &copy; NextGenApps
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
